@@ -1,6 +1,8 @@
 # `"type": "end"`
 
-> ## **WIP**
+> Anything listed here are subject to change at any moment
+
+State of the round when the round end. This include room settings, player handling, line cleared, board state, player stats, etc.  
 
 ## Format
 
@@ -47,29 +49,29 @@
         * (unknown?) `socket`: Seems to be null only?
         * (unknown?) `bindHyperRetry`: Seems to be null only?
         * (unknown?) `bindHyperForfeit`: Seems to be null only?
-      * (object) `options`: Include Room/Hidden/Unmodifiable config, and player handling/customization(?) For room config see [Room_Config](//Room_configmd) For player see `stats`, for some option not listed in Room_Config see below
-        * (int) `fulloffset`:
-        * (int) `fullinterval`:
-        * (unknown?) `onfinish`: null,
-        * (unknown?) `oninteraction`: null
-        * (string) `username`:
+      * (object) `options`: Include Room/Hidden/Unmodifiable config, and player handling/customization(?) For room config see [Room_Config](../../../Room_Config.md) For player see `stats`, for some option not listed in Room_Config see below
+        * (int) `fulloffset`: Unknown
+        * (int) `fullinterval`: Unknown
+        * (unknown?) `onfinish`: Unknown, seems to be null only?
+        * (unknown?) `oninteraction`: Unknown, seems to be null only?
+        * (string) `username`: Player username.
         * (int) `boardwidth`: The width of the board. Default value is 10, seems to be only modifiable server side.
         * (int) `boardheight`: The amount of rows that is visible. Default value is 20, seems to be only modifiable server side.
         * (int) `boardbuffer`: The amount of rows beyond the topout line. Default value is 20, seems to be only modifiable server side.
         * (boolean) `physical`: not sure about this
-        * (object) `minoskin`:
-          * (string) `z`: `tetrio`
-          * (string) `l`: `tetrio`
-          * (string) `o`: `tetrio`
-          * (string) `s`: `tetrio`
-          * (string) `i`: `tetrio`
-          * (string) `j`: `tetrio`
-          * (string) `t`: `tetrio`
-          * (string) `other`: `tetrio`
-        * (string) `ghostskin`: `tetrio`
-        * (string) `boardskin`: `generic`
+        * (object) `minoskin`: Player's blockskin. Default is [`"tetrio"`](https://tetr.io/res/skins/minos/tetrio.png). **TODO: connected format test.**
+          * (string) `z`: Z piece.
+          * (string) `l`: L piece.
+          * (string) `o`: O piece
+          * (string) `s`: S piece
+          * (string) `i`: I piece
+          * (string) `j`: J piece
+          * (string) `t`: T piece
+          * (string) `other`: Garbage hole and already hold. Default is [`"tetrio"`](https://tetr.io/res/skins/minos/tetrio.png). **TODO: connected format test.**
+        * (string) `ghostskin`: Ghost piece. Default is [`"tetrio"`](https://tetr.io/res/skins/ghost/tetrio.png). **TODO: connected format test.**
+        * (string) `boardskin`: Other board asset such as [queue/hold](https://tetr.io/res/skins/board/generic/queue.png), [grid](https://tetr.io/res/skins/board/generic/grid.png), and [board](https://tetr.io/res/skins/board/generic/board.png)
       * (object) `stats`:
-        * (int) `seed`:
+        * (int) `seed`: Queue seed, see [Piece_RNG.md](../../../Piece_RNG.md).
         * (int) `lines`:
         * (int) `level_lines`:
         * (int) `level_lines_needed`:
