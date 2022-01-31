@@ -1,9 +1,7 @@
 # _id
 
-The long form of the id.
+> **Tetra League** only
 
 ## Format
 
 * (string) `_id`: Internal id for the replay.
-
-TODO: Better description.

@@ -1,9 +1,7 @@
 # shortid
 
-> **WIP**: this is still a work in progress
+> **Tetra League** only.
 
 ## Format
 
-* (string) `shortid`:
-
-TODO: description.
+* (string) `shortid`: Shorter id format to make it easier for sharing.
