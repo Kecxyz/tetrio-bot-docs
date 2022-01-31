@@ -118,7 +118,7 @@
     * (string[]) `targets`:
     * (int) `fire`:
     * (object) `game`:
-      * (array) `board`:
+      * (string[]) `board`:
       * (string[]) `bag`:
       * (object) `hold`:
         * (string?) `piece`:
