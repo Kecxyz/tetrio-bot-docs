@@ -1,4 +1,4 @@
-# `type: "full"`
+# `"type": "full"`
 
 > ## **WIP**
 
