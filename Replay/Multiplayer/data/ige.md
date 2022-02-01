@@ -13,11 +13,11 @@
       * (object) `data`:
         * (string) `type`: only possible value is `"garbage"`(? not sure)
         * (int) `amt`: Amount of garbage that was sent.
-        * (int) `x`: Position of the piece that cleared the line that send garbage.
-        * (int) `y`: Position of the piece that cleared the line that send garbage on.
+        * (int) `x`: Horizontal position of the piece that cleared the line that sent garbage.
+        * (int) `y`: Vertical position of the piece that cleared the line that sent garbage.
         * (int) `column`: Which column garbage will appear in.
-      * (string) `sender`: Username of who sended the garbage.
-      * (int) `sent_frame`: Which frame that the garbage were sended.
+      * (string) `sender`: Username of who sent the garbage.
+      * (int) `sent_frame`: Which frame the garbage was sent on.
       * (int) `cid`: Enumerate for each pair of `"interaction"` and `"interaction_confirm"`.
 
 TODO: more testing.
