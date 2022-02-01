@@ -12,7 +12,7 @@
       * (string) `type`: `"interaction"` for the frame you receive the information about garbage. `"interaction_confirm"` for the frame that you actually receive garbage.
       * (object) `data`:
         * (string) `type`: only possible value is `"garbage"`(? not sure)
-        * (int) `amt`: Amount of garbage that were sended.
+        * (int) `amt`: Amount of garbage that was sent.
         * (int) `x`: Position of the piece that cleared the line that send garbage.
         * (int) `y`: Position of the piece that cleared the line that send garbage on.
         * (int) `column`: Which column garbage will appear in.
