@@ -72,11 +72,11 @@ State of the round when the round end. This include room settings, player handli
         * (string) `boardskin`: Other board asset such as [queue/hold](https://tetr.io/res/skins/board/generic/queue.png), [grid](https://tetr.io/res/skins/board/generic/grid.png), and [board](https://tetr.io/res/skins/board/generic/board.png)
       * (object) `stats`:
         * (int) `seed`: Queue seed, see [Piece_RNG.md](../../../Piece_RNG.md).
-        * (int) `lines`:
-        * (int) `level_lines`:
-        * (int) `level_lines_needed`:
-        * (int) `inputs`:
-        * (int) `holds`:
+        * (int) `lines`: line cleared.
+        * (int) `level_lines`: Unimportant value since there are not leveling in multiplayer default is `0`.
+        * (int) `level_lines_needed`:Unimportant value since there are not leveling in multiplayer default is `1`.
+        * (int) `inputs`: Number of inputs that has been pressed.
+        * (int) `holds`: Number of hold used.
         * (object) `time`:
           * (int) `start`: 0,
           * (boolean) `zero`: true,
