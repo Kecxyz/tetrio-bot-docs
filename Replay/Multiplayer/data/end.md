@@ -73,8 +73,8 @@ State of the round when the round end. This include room settings, player handli
       * (object) `stats`:
         * (int) `seed`: Queue seed, see [Piece_RNG.md](../../../Piece_RNG.md).
         * (int) `lines`: line cleared.
-        * (int) `level_lines`: Unimportant value since there are not leveling in multiplayer default is `0`.
-        * (int) `level_lines_needed`:Unimportant value since there are not leveling in multiplayer default is `1`.
+        * (int) `level_lines`: Unimportant value since there are no leveling in multiplayer default is `0`.
+        * (int) `level_lines_needed`: Unimportant value since there are no leveling in multiplayer default is `1`.
         * (int) `inputs`: Number of inputs that has been pressed.
         * (int) `holds`: Number of hold used.
         * (object) `time`:
@@ -83,74 +83,75 @@ State of the round when the round end. This include room settings, player handli
           * (boolean) `locked`: false,
           * (int) `prev`: 0,
           * (int) `frameoffset`: 0
-        * (int) `score`:
-        * (int) `zenlevel`:
-        * (int) `zenprogress`:
-        * (int) `level`:
-        * (int) `combo`:
-        * (int) `currentcombopower`:
-        * (int) `topcombo`:
-        * (int) `btb`:
-        * (int) `topbtb`:
-        * (int) `tspins`:
-        * (int) `piecesplaced`:
+        * (int) `score`: Player's score.
+        * (int) `zenlevel`: Unimportant value. Default is `1`
+        * (int) `zenprogress`: Unimportant value. Default is `0`
+        * (int) `level`: Unimportant value since you can't level up in multiplayer. Default is `1`
+        * (int) `combo`: Current combo when the round end.
+        * (int) `currentcombopower`: Possibly about multiplier? TODO: NEED TESTING
+        * (int) `topcombo`: Highest combo.
+        * (int) `btb`: Current back to back when the round end.
+        * (int) `topbtb`: Highest back to back value.
+        * (int) `tspins`: Number of spin cleared.
+        * (int) `piecesplaced`: Total piece placed by the player.
         * (object) `clears`:
-          * (int) `singles`:
-          * (int) `doubles`:
-          * (int) `triples`:
-          * (int) `quads`:
-          * (int) `realtspins`:
-          * (int) `minitspins`:
-          * (int) `minitspinsingles`:
-          * (int) `tspinsingles`:
-          * (int) `minitspindoubles`:
-          * (int) `tspindoubles`:
-          * (int) `tspintriples`:
-          * (int) `tspinquads`:
-          * (int) `allclear`:
+          * (int) `singles`: Total single clear.
+          * (int) `doubles`: Total double cleared
+          * (int) `triples`: Total triple cleared
+          * (int) `quads`: Total quad cleared
+          * (int) `realtspins`: TODO:NEED TESTING
+          * (int) `minitspins`: TODO:NEED TESTING
+          * (int) `minitspinsingles`: Number of cleared mini single spin.
+          * (int) `tspinsingles`: Number of cleared single spin.
+          * (int) `minitspindoubles`: Number of cleared mini double spin.
+          * (int) `tspindoubles`: Number of cleared double spin.
+          * (int) `tspintriples`: Number of cleared triple spin.
+          * (int) `tspinquads`: Number of cleared quad spin.
+          * (int) `allclear`: Total allclear cleared
         * (object) `garbage`:
-          * (int) `sent`:
-          * (int) `received`:
-          * (int) `attack`:
-          * (int) `cleared`:
+          * (int) `sent`: Garbage sent.
+          * (int) `received`: Garbage received.
+          * (int) `attack`: TODO: Extra testing
+          * (int) `cleared`: TODO: Extra testing
         * (int) `kills`:
         * (object) `finesse`:
-          * (int) `combo`:
-          * (int) `faults`:
-          * (int) `perfectpieces`:
-      * (string[]) `targets`:
-      * (int) `fire`:
+          * (int) `combo`: im guessing number of pieces with perfect finesse consecutive to each other right be fore the round end. TODO: testing
+          * (int) `faults`: Number of finesse fault.
+          * (int) `perfectpieces`: Number of piece with perfect finesse.
+      * (string[]) `targets`: userid of the player(s) that being send garbage to.
+      * (int) `fire`: is the player on fire? TODO : test this
       * (object) `game`:
-        * (string[]) `board`:
-        * (string[]) `bag`:
+        * (string[]) `board`: Matrix constructed with `boardheight`+`boardbuffer` as height and `boardwidth` as width, displaying the board final state.
+  `null` for empty space,  `"l"` for L piece colored block. `"j"` for J piece colored block. `"o"` for O piece colored block. `"i"` for I piece colored block. `"s"` for S piece colored block. `"z"` for Z piece colored block. `"l"` for L piece colored block. `"gb"` for garbage block.
+        * (string[]) `bag`: Current piece in preview with piece the first place as playing piece.
         * (object) `hold`:
-          * (string?) `piece`:
-          * (boolean) `locked`:
-        * (float?/double?) `g`:
-        * (object) `controlling`:
-          * (int?/float?) `ldas`:
-          * (int?/float?) `ldasiter`:
+          * (string?) `piece`: Current piece in hold.
+          * (boolean) `locked`: To see if the hold piece holdable.
+        * (float) `g`: gravity value when the round end
+        * (object) `controlling`: TODO:all of this need testing.
+          * (float?) `ldas`:
+          * (float?) `ldasiter`:
           * (boolean) `lshift`:
-          * (int?/float?) `rdas`:
-          * (int?/float?) `rdasiter`:
+          * (float?) `rdas`:
+          * (float?) `rdasiter`:
           * (boolean) `rshift`:
-          * (int?/float?) `lastshift`:
+          * (float?) `lastshift`:
           * (boolean) `softdrop`:
         * (object) `handling`:
-          * (float) `arr`:
-          * (float) `das`:
-          * (float) `dcd`:
-          * (int) `sdf`:
-          * (boolean) `safelock`:
-          * (boolean) `cancel`:s
-        * (boolean) `playing`:
-      * (object) `killer`
+          * (float) `arr`: Player's ARR value.
+          * (float) `das`: Player's DAS value.
+          * (float) `dcd`: Player's DCD value.
+          * (int) `sdf`: Player's SDF value.
+          * (boolean) `safelock`: Is prevent accidental harddrop on or off.
+          * (boolean) `cancel`: Is cancel DAS when changing direction on or off.
+        * (boolean) `playing`: True for winner of the round. False for loser.
+      * (object) `killer`: Should be who killed the user but there are still name value even when the user won the round? TODO: more testing
         * (string?) `name`:
         * (string) `type`:
-      * (object) `assumtions`:
+      * (object) `assumtions`: Unknown what the do.
       * (object) `aggregatestats`:
-        * (float) `apm`:
-        * (float) `pps`:
-        * (float) `vsscore`:
+        * (float) `apm`: Player's APM stat.
+        * (float) `pps`: Player's PPS stat.
+        * (float) `vsscore`: Player's VS score.
 
 TODO: lots of testing required.
