@@ -1,6 +1,6 @@
 # shortid
 
-> **Tetra League** only.
+**Tetra League** only.
 
 ## Format
 

@@ -1,6 +1,6 @@
 # _id
 
-> **Tetra League** only
+Tetra League only
 
 ## Format
 

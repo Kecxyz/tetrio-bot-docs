@@ -1,9 +1,9 @@
 # ts
 
-> **WIP**: this is still a work in progress
+The time when the replay finished.
 
 ## Format
 
-* (string) `ts`: ISO 8601.
+* (string) `ts`: ISO 8601 format.
 
 TODO: description.

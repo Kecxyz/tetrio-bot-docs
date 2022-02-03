@@ -1,9 +1,7 @@
 # gametype
 
-> **WIP**: this is still a work in progress
+Only shown in Tetra League replay.
 
 ## Format
 
-* (string) `gametype`:
-
-TODO: description.
+* (string) `gametype`: `"league"` only.

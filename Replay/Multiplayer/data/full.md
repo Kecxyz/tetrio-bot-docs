@@ -56,7 +56,7 @@
       * (int) `boardheight`: The amount of rows that is visible. Default value is 20, seems to be only modifiable server side.
       * (int) `boardbuffer`: The amount of rows beyond the topout line. Default value is 20, seems to be only modifiable server side.
       * (boolean) `physical`: not sure about this
-      * (object) `minoskin`: Player's blockskin. Default is [`"tetrio"`](https://tetr.io/res/skins/minos/tetrio.png). **TODO: connected format test.**
+      * (object) `minoskin`: Player's blockskin. Default is [`"tetrio"`](https://tetr.io/res/skins/minos/tetrio.png).
         * (string) `z`: Z piece.
         * (string) `l`: L piece.
         * (string) `o`: O piece
@@ -64,8 +64,8 @@
         * (string) `i`: I piece
         * (string) `j`: J piece
         * (string) `t`: T piece
-          * (string) `other`: Garbage hole and already hold. **TODO: connected format test.**
-        * (string) `ghostskin`: Ghost piece. Default is [`"tetrio"`](https://tetr.io/res/skins/ghost/tetrio.png). **TODO: connected format test.**
+          * (string) `other`: Garbage hole and already hold. 
+        * (string) `ghostskin`: Ghost piece. Default is [`"tetrio"`](https://tetr.io/res/skins/ghost/tetrio.png).
         * (string) `boardskin`: Other board asset such as [queue/hold](https://tetr.io/res/skins/board/generic/queue.png), [grid](https://tetr.io/res/skins/board/generic/grid.png), and [board](https://tetr.io/res/skins/board/generic/board.png)
     * (object) `stats`:
       * (int) `seed`: Queue seed, see [Piece_RNG.md](../../../Piece_RNG.md).
@@ -74,7 +74,7 @@
       * (int) `level_lines_needed`: Unimportant value since there are no leveling in multiplayer default is `1`.
       * (int) `inputs`: Number of inputs that has been pressed.
       * (int) `holds`: Number of hold used.
-      * (object) `time`: TODO: This need more testing.
+      * (object) `time`:
         * (int) `start`: 0,
         * (boolean) `zero`: true,
         * (boolean) `locked`: false,
@@ -85,7 +85,7 @@
       * (int) `zenprogress`: Unimportant value. Default is `0`
       * (int) `level`: Unimportant value since you can't level up in multiplayer. Default is `1`
       * (int) `combo`: Current combo when the round end.
-      * (int) `currentcombopower`: Possibly about multiplier? TODO: NEED TESTING
+      * (int) `currentcombopower`: Possibly about multiplier?
       * (int) `topcombo`: Highest combo.
       * (int) `btb`: Current back to back.
       * (int) `topbtb`: Highest back to back value.
@@ -96,8 +96,8 @@
         * (int) `doubles`: Total double cleared
         * (int) `triples`: Total triple cleared
         * (int) `quads`: Total quad cleared
-        * (int) `realtspins`: TODO:NEED TESTING
-        * (int) `minitspins`: TODO:NEED TESTING
+        * (int) `realtspins`:
+        * (int) `minitspins`: 
         * (int) `minitspinsingles`: Number of cleared mini single spin.
         * (int) `tspinsingles`: Number of cleared single spin.
         * (int) `minitspindoubles`: Number of cleared mini double spin.
@@ -108,15 +108,15 @@
       * (object) `garbage`:
         * (int) `sent`: Garbage sent.
         * (int) `received`: Garbage received.
-        * (int) `attack`: TODO: Extra testing
-        * (int) `cleared`: TODO: Extra testing
+        * (int) `attack`:
+        * (int) `cleared`:
       * (int) `kills`: How many kills does player have.
       * (object) `finesse`:
-        * (int) `combo`: im guessing number of pieces with perfect finesse consecutive to each other right before the round end. TODO: testing
+        * (int) `combo`: im guessing number of pieces with perfect finesse consecutive to each other right before the round end.
         * (int) `faults`: Number of finesse fault.
         * (int) `perfectpieces`: Number of piece with perfect finesse.
     * (string[]) `targets`: userid of the player(s) that being send garbage to.
-    * (int) `fire`: TODO : test this
+    * (int) `fire`:
     * (object) `game`:
       * (string[]) `board`: Matrix constructed with `boardheight`+`boardbuffer` as height and `boardwidth` as width, displaying the board final state.
   `null` for empty space,  `"l"` for L piece colored block. `"j"` for J piece colored block. `"o"` for O piece colored block. `"i"` for I piece colored block. `"s"` for S piece colored block. `"z"` for Z piece colored block. `"l"` for L piece colored block. `"gb"` for garbage block.
@@ -125,7 +125,7 @@
         * (string?) `piece`: Current piece in hold.
         * (boolean) `locked`: To see if the hold piece holdable.
       * (float) `g`: gravity value when the round end
-      * (object) `controlling`: TODO:all of this need testing.
+      * (object) `controlling`:
         * (float?) `ldas`:
         * (float?) `ldasiter`:
         * (boolean) `lshift`:
@@ -142,7 +142,7 @@
         * (boolean) `safelock`: Is prevent accidental harddrop on or off.
         * (boolean) `cancel`: Is cancel DAS when changing direction on or off.
       * (boolean) `playing`: Should be `true` for both
-    * (object) `killer`: Should be who killed the user but there are still name value even when the user won the round? TODO: more testing
+    * (object) `killer`: Should be who killed the user but there are still name value even when the user won the round?
       * (string?) `name`:
       * (string) `type`:
     * (object) `assumtions`: Unknown what the do.
@@ -151,4 +151,4 @@
       * (float) `pps`: Player's PPS stat.
       * (float) `vsscore`: Player's VS score.
 
-TODO: lots of testing required.
+TODO: Testing the connected skin format. Test `currentcombopower`. Test `realtspins` and `minitspins`. Test `attack` and `cleared`. Test `fire`. Test `controlling` object. Test `killer`. Test finesse `combo`. Test `time` object.
