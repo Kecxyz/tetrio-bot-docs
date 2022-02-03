@@ -1,6 +1,6 @@
 # `"type": "start"`
 
-> ## WIP
+Noting the start of a round.
 
 ## Formats
 

@@ -15,7 +15,7 @@ The value of `type` will dictate the data.
     * (boolean) `success`:
     * (int) `winning`:
   * (object[]) `replays`:
-    * (int) `frames`:
+    * (int) `frames`: Total of frame played.
     * (object[]) `events`:
-      * (int) `frame`:
-      * (string) `type`: Possible values are `"keydown"`, `"keyup"`, `"ige"`, `"start"`, `"targets"`, `"full"` and `"end"`.
+      * (int) `frame`: The frame that the action was initiate.
+      * (string) `type`: Possible values are [`"keydown"`](/Replay/Multiplayer/data/keydown.md), [`"keyup"`](/Replay/Multiplayer/data/keyup.md), [`"ige"`](/Replay/Multiplayer/data/ige.md), [`"start"`](/Replay/Multiplayer/data/start.md), [`"targets"`](/Replay/Multiplayer/data/targets.md), [`"full"`](/Replay/Multiplayer/data/full.md) and [`"end"`](/Replay/Multiplayer/data/end.md).
