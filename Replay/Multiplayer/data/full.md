@@ -126,14 +126,14 @@
         * (boolean) `locked`: To see if the hold piece holdable.
       * (float) `g`: gravity value when the round end
       * (object) `controlling`:
-        * (float?) `ldas`:
-        * (float?) `ldasiter`:
-        * (boolean) `lshift`:
-        * (float?) `rdas`:
-        * (float?) `rdasiter`:
-        * (boolean) `rshift`:
-        * (float?) `lastshift`:
-        * (boolean) `softdrop`:
+        * (float?) `ldas`: How long left DAS has been active for. Measure in frame.
+        * (float?) `ldasiter`: How long left ARR has been active for. Measure in frame.
+        * (boolean) `lshift`: Whether the piece is moving left.
+        * (float?) `rdas`: How long right DAS has been active for. Measure in frame.
+        * (float?) `rdasiter`: How long right ARR has been active for. Measure in frame.
+        * (boolean) `rshift`: Whether the piece is moving right.
+        * (int) `lastshift`: -1 if the piece is moving left, and 1 if it's moving right.
+        * (boolean) `softdrop`: Whether or not the piece is softdropping.
       * (object) `handling`:
         * (float) `arr`: Player's ARR value.
         * (float) `das`: Player's DAS value.
@@ -151,4 +151,4 @@
       * (float) `pps`: Player's PPS stat.
       * (float) `vsscore`: Player's VS score.
 
-TODO: Testing the connected skin format. Test `currentcombopower`. Test `realtspins` and `minitspins`. Test `attack` and `cleared`. Test `fire`. Test `controlling` object. Test `killer`. Test finesse `combo`. Test `time` object.
+TODO: Testing the connected skin format. Test `currentcombopower`. Test `realtspins` and `minitspins`. Test `attack` and `cleared`. Test `fire`. Test `killer`. Test finesse `combo`. Test `time` object.
